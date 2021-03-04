@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/dislike"
+        android:icon="@drawable/ic_baseline_thumb_down_alt_24"
+        android:title="Dislike"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/like"
+        android:icon="@drawable/ic_baseline_thumb_up_alt_24"
+        android:title="Like"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Favorites"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="Favorites"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/OpenWeatherMap"
+        android:title="OpenWeather"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Exit"
+        app:showAsAction="always" />
+</menu>

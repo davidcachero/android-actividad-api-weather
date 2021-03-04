@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72B0CC"
+    tools:context=".fragments.Compare">
+
+    <ImageView
+        android:id="@+id/imageViewFirst"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDescriptionFirst"
+        app:layout_constraintEnd_toStartOf="@+id/textViewtemperatureFirst"
+        app:layout_constraintStart_toEndOf="@+id/textViewnameFirst"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewtemperatureFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="76dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/colorFont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFirst"
+        app:layout_constraintTop_toTopOf="@+id/imageViewFirst"
+        tools:text="30°C" />
+
+    <TextView
+        android:id="@+id/textViewnameFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="53dp"
+        android:text="City"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/colorFont"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewcountryFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="11dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintStart_toStartOf="@+id/textViewfeelslikeFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewfeelslikeFirst"
+        tools:text="Pais: ES" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionFirst"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintBottom_toTopOf="@+id/textViewfeelslikeFirst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewnameFirst"
+        tools:text="Descripcion" />
+
+    <TextView
+        android:id="@+id/textViewtempMaxFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="59dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewcountryFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewcountryFirst"
+        tools:text="MÁXIMAS: 37°C" />
+
+    <TextView
+        android:id="@+id/textViewallFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewtempMinFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtempMinFirst"
+        tools:text="NUBES: 0%" />
+
+    <TextView
+        android:id="@+id/textViewtempMinFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewtempMaxFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtempMaxFirst"
+        tools:text="MÍNIMAS: 22°C" />
+
+    <TextView
+        android:id="@+id/textViewfeelslikeFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/colorFont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewnameFirst"
+        tools:text="Sensación térmica" />
+
+    <TextView
+        android:id="@+id/textViewhumidityFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewpressureFirst"
+        app:layout_constraintStart_toStartOf="@+id/textViewpressureFirst"
+        tools:text="HUMEDAD: 60%" />
+
+    <TextView
+        android:id="@+id/textViewvelocityFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewpressureFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewpressureFirst"
+        tools:text="VELOCIDAD: 2%" />
+
+    <TextView
+        android:id="@+id/textViewpressureFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewpressureSecond"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewhumiditySecond"
+        app:layout_constraintTop_toBottomOf="@+id/textViewcountryFirst"
+        tools:text="PRESIÓN: 1021hPA" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionSecond"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewfeelslikeSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewnameSecond"
+        tools:text="Descripcion" />
+
+    <TextView
+        android:id="@+id/textViewfeelslikeSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/colorFont"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcountrySecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Sensación térmica" />
+
+    <TextView
+        android:id="@+id/textViewtempMaxSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewtempMinSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewtempMinSecond"
+        tools:text="MÁXIMAS: 37°C" />
+
+    <TextView
+        android:id="@+id/textViewtempMinSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewallSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewallSecond"
+        tools:text="MÍNIMAS: 22°C" />
+
+    <TextView
+        android:id="@+id/textViewallSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="42dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewvelocitySecond"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="NUBES: 0%" />
+
+    <TextView
+        android:id="@+id/textViewhumiditySecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewpressureSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewpressureSecond"
+        tools:text="HUMEDAD: 60%" />
+
+    <TextView
+        android:id="@+id/textViewpressureSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewvelocitySecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewvelocitySecond"
+        tools:text="PRESIÓN: 1021hPA" />
+
+    <TextView
+        android:id="@+id/textViewvelocitySecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="42dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewallSecond"
+        tools:text="VELOCIDAD: 2%" />
+
+    <TextView
+        android:id="@+id/textViewcountrySecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="24dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintBottom_toTopOf="@+id/textViewtempMaxSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewfeelslikeSecond"
+        tools:text="Pais: ES" />
+
+    <TextView
+        android:id="@+id/textViewtemperatureSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/colorFont"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescriptionSecond"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSecond"
+        tools:text="30°C" />
+
+    <ImageView
+        android:id="@+id/imageViewSecond"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewhumiditySecond"
+        app:layout_constraintEnd_toStartOf="@+id/textViewtemperatureSecond"
+        app:layout_constraintStart_toEndOf="@+id/textViewnameSecond"
+        app:layout_constraintTop_toTopOf="@+id/textViewcountryFirst"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewnameSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="8dp"
+        android:text="City"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/colorFont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSecond" />
+</androidx.constraintlayout.widget.ConstraintLayout>

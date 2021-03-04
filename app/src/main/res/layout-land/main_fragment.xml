@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72B0CC"
+    tools:context=".fragments.OpenWeatherMap">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewname"
+        app:layout_constraintEnd_toStartOf="@+id/textViewtempMin"
+        app:layout_constraintStart_toEndOf="@+id/textViewname"
+        app:layout_constraintTop_toTopOf="@+id/textViewname"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewfeelslike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="22dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/colorFont"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtemperature"
+        tools:text="Sensación térmica" />
+
+    <TextView
+        android:id="@+id/textViewcountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintStart_toStartOf="@+id/textViewfeelslike"
+        app:layout_constraintTop_toBottomOf="@+id/textViewfeelslike"
+        tools:text="Pais: ES" />
+
+    <TextView
+        android:id="@+id/textViewtemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="355dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/colorFont"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="30°C" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="9dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorFont"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewfeelslike"
+        app:layout_constraintEnd_toStartOf="@+id/textViewtemperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewtemperature"
+        tools:text="Descripcion" />
+
+    <TextView
+        android:id="@+id/textViewname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="1dp"
+        android:text="City"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+        android:textColor="@color/colorFont"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewtempMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewtempMin"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="MÁXIMAS: 37.5°C" />
+
+    <TextView
+        android:id="@+id/textViewvelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewpressure"
+        app:layout_constraintTop_toBottomOf="@+id/textViewpressure"
+        tools:text="VELOCIDAD: 2%" />
+
+    <TextView
+        android:id="@+id/textViewtempMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="44dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewpressure"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtempMax"
+        tools:text="MÍNIMAS: 22.0°C" />
+
+    <TextView
+        android:id="@+id/textViewpressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewtempMin"
+        app:layout_constraintTop_toTopOf="@+id/textViewtempMin"
+        tools:text="PRESIÓN: 1021 hPA" />
+
+    <TextView
+        android:id="@+id/textViewhumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewpressure"
+        app:layout_constraintStart_toStartOf="@+id/textViewpressure"
+        tools:text="HUMEDAD: 60%" />
+
+    <TextView
+        android:id="@+id/textViewall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewtempMin"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtempMin"
+        tools:text="NUBES: 0%" />
+</androidx.constraintlayout.widget.ConstraintLayout>

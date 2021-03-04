@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.tareaapiweatherdavid.fragments.Home"
+        android:label="home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/Login" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerFragment"
+            app:destination="@id/Register" />
+        <action
+            android:id="@+id/action_homeFragment_to_mainWeather"
+            app:destination="@id/OpenWeatherMap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.example.tareaapiweatherdavid.fragments.Login"
+        android:label="login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/Register" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainWeather"
+            app:destination="@id/OpenWeatherMap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Register"
+        android:name="com.example.tareaapiweatherdavid.fragments.Register"
+        android:label="register_fragment" />
+    <fragment
+        android:id="@+id/OpenWeatherMap"
+        android:name="com.example.tareaapiweatherdavid.fragments.OpenWeatherMap"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainOpenWeather_to_favoritesFragment"
+            app:destination="@id/Favorites" />
+        <argument
+            android:name="name"
+            app:argType="android.os.Bundle" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Favorites"
+        android:name="com.example.tareaapiweatherdavid.fragments.Favorites"
+        android:label="favorites_fragment"
+        tools:layout="@layout/favorites_fragment">
+        <action
+            android:id="@+id/action_favoritesFragment_to_mainWeather"
+            app:destination="@id/OpenWeatherMap" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_compareFragment"
+            app:destination="@id/Compare" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_modifyFragment"
+            app:destination="@id/Modify" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Compare"
+        android:name="com.example.tareaapiweatherdavid.fragments.Compare"
+        android:label="compare_fragment"
+        tools:layout="@layout/compare_fragment">
+        <argument
+            android:name="FirstCity"
+            app:argType="string" />
+        <argument
+            android:name="SecondCity"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Modify"
+        android:name="com.example.tareaapiweatherdavid.fragments.Modify"
+        android:label="modify_fragment"
+        tools:layout="@layout/modify_fragment">
+        <argument
+            android:name="city"
+            app:argType="string" />
+    </fragment>
+</navigation>

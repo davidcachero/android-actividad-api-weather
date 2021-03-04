@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72B0CC"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.tareaapiweatherdavid.fragments.Login">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Inicio Sesión"
+        android:textColor="@color/colorFont"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+    <EditText
+        android:id="@+id/editTextUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textAllCaps="false" />
+
+    <CheckBox
+        android:id="@+id/recorder"
+        android:layout_width="164dp"
+        android:layout_height="25dp"
+        android:text="Recordar contraseña"
+        android:textColor="@color/colorFont"/>
+
+    <TextView
+        android:id="@+id/textViewOlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="¿Olvidaste la contraseña?"
+        android:textColor="@color/colorFont"
+        android:textAlignment="center" />
+</LinearLayout>
